@@ -26,6 +26,7 @@ auth.onAuthStateChanged(function (user) {
         document.getElementById('displayName').innerHTML = user.displayName;
         console.log('user', user, currentUser);
     } else {
+        // window.location.href = '/';
         // console.log('no user');
         // document.getElementById('dash-main').style.display = 'none';
     }
@@ -121,4 +122,12 @@ function logout(event) {
         alert(error.message);
     });
 
+}
+
+function loader(){
+    document.querySelector(".remove1").style.display = "none";
+    document.querySelector(".remove2").style.display = "none";
+    document.querySelector(".remove3").style.display = "none";
+    document.querySelector(".remove4").style.display = "none";
+    document.querySelector('.lds-facebook').style.display = 'inline-block'
 }
